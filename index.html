@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>기말과제 · 웹앱 모음 | 양준모</title>
+<style>
+  :root {
+    --bg1: #1e2a5a; --bg2: #3b6ef6;
+    --panel: #ffffff; --text: #1f2430; --muted: #6b7280;
+    --accent: #3b6ef6; --border: #e6e9f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { min-height: 100%; }
+  body {
+    font-family: "Segoe UI", "Malgun Gothic", system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, var(--bg1), var(--bg2));
+    display: flex; align-items: center; justify-content: center;
+    padding: 28px; color: var(--text); min-height: 100vh;
+  }
+  .card {
+    width: 100%; max-width: 760px;
+    background: var(--panel); border-radius: 22px;
+    box-shadow: 0 24px 70px rgba(0,0,0,.3);
+    padding: 48px 52px; text-align: center;
+  }
+  .tag {
+    display: inline-block; font-size: 13px; font-weight: 700;
+    color: var(--accent); background: #eef3ff;
+    padding: 6px 14px; border-radius: 999px; letter-spacing: .3px;
+  }
+  h1 { font-size: 30px; font-weight: 800; margin-top: 16px; }
+  .sub { font-size: 15px; color: var(--muted); margin-top: 10px; }
+
+  .who {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;
+    margin-top: 22px;
+  }
+  .who span {
+    font-size: 13px; color: var(--muted);
+    background: #f4f6fb; border: 1px solid var(--border);
+    padding: 7px 14px; border-radius: 999px;
+  }
+  .who span b { color: var(--text); font-weight: 700; }
+
+  .apps { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 34px; }
+  .app {
+    display: block; text-decoration: none; color: inherit;
+    background: #f7f9fc; border: 1px solid var(--border);
+    border-radius: 18px; padding: 30px 22px;
+    transition: transform .14s, box-shadow .14s, border-color .14s, background .14s;
+  }
+  .app:hover {
+    transform: translateY(-4px); background: #fff;
+    box-shadow: 0 14px 32px rgba(59,110,246,.22);
+    border-color: var(--accent);
+  }
+  .app .ic { font-size: 46px; line-height: 1; }
+  .app .name { font-size: 18px; font-weight: 800; margin-top: 14px; }
+  .app .desc { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.55; }
+  .app .go {
+    display: inline-block; margin-top: 14px;
+    font-size: 13px; font-weight: 700; color: var(--accent);
+  }
+
+  .repo {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 30px; font-size: 13px; font-weight: 600;
+    color: var(--muted); text-decoration: none;
+    border: 1px solid var(--border); border-radius: 10px;
+    padding: 9px 16px; transition: border-color .14s, color .14s;
+  }
+  .repo:hover { border-color: var(--accent); color: var(--accent); }
+
+  .foot { font-size: 12px; color: var(--muted); margin-top: 26px; }
+
+  @media (max-width: 560px) {
+    .card { padding: 34px 24px; }
+    h1 { font-size: 24px; }
+    .apps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <span class="tag">경영경제소프트웨어 · 기말과제</span>
+    <h1>웹앱 모음</h1>
+    <p class="sub">아래에서 사용할 앱을 선택하세요. 브라우저에서 바로 실행됩니다.</p>
+
+    <div class="who">
+      <span>학과 <b>경영학과</b></span>
+      <span>학번 <b>20236721</b></span>
+      <span>이름 <b>양준모</b></span>
+    </div>
+
+    <div class="apps">
+      <a class="app" href="app1.html">
+        <div class="ic">📄</div>
+        <div class="name">앱1 · PDF 편집기</div>
+        <div class="desc">여러 PDF에서 필요 없는 페이지를 지우고 순서를 바꿔 새 PDF로 저장</div>
+        <span class="go">실행하기 →</span>
+      </a>
+
+      <a class="app" href="app2.html">
+        <div class="ic">🖼️</div>
+        <div class="name">앱2 · 이미지 자르기</div>
+        <div class="desc">JPG·PNG 이미지를 원하는 가로세로 비율로 잘라 새 이미지로 저장</div>
+        <span class="go">실행하기 →</span>
+      </a>
+    </div>
+
+    <a class="repo" href="https://github.com/junmo0210/Final-exam" target="_blank" rel="noopener noreferrer">
+      📁 GitHub 소스 코드 보기
+    </a>
+
+    <p class="foot">© 2026 양준모 · 경영학과</p>
+  </main>
+</body>
+</html>
